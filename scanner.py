@@ -10,6 +10,7 @@ TOKEN_PATTERNS = {
     "REM_VAlUE": re.compile(r"[0-9]+em"),
     "%_VALUE": re.compile(r"[0-9]+%"),
     "INT_VALUE": re.compile(r"[0-9]+"),
+    "URL_VALUE": re.compile(r"url\([0-9a-zA-Z\?=_:;-]+\)"),
     "OPERATOR": re.compile(r"\+|>"),
     "ID": re.compile(r"\*|(#|\.)*[a-zA-Z._]*:*[a-zA-Z._]+"),
     "IMPORTANT": re.compile(r"!important"),
