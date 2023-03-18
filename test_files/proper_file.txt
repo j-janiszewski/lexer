@@ -1,0 +1,28 @@
+// to jest komentarz, np. z nazwą pliku: correct.ppap
+#abc
+	background: url(watch?v=Ct6BUPvE2sM);
+	color: #f00;
+	box-shadow: none;
+	text-shadow: none;
+
+.def
+	content: "see below";
+
+p > pre
+	border: 1px solid #999;
+	page-break-inside: avoid;
+
+div + p,
+div > p
+	font-weight: bolder
+
+p img
+	max-width: 100% !important;
+
+pine + apple,
+* + * // * jest poprawnym selektorem
+	orphans: 3;
+	widows: 3rem;
+
+a:visited
+	color: white;
