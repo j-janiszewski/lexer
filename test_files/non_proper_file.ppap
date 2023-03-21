@@ -1,0 +1,21 @@
+p + q // operators (np. +, >) cannot appear more than once between id's
+	content: "see below";
+	border: 1px solid #999;
+	page-break-inside: avoid;
+
+div+p,
+div>p
+	font-size: smaller; // too small indendation
+	font-family: serif; //too big indendation
+	font-weight: bolder; // here is ok
+	font-style: normal; 
+
+pine + apple
+	max-width: 100%; // only  !important can have !
+
+foo _bar, // valid id
+baz, // non-valid id
+:quax // valid id
+	display: flex; // semicolon must be present between attributes
+	margin: 1px // lack of semicolon is ok at the end
+

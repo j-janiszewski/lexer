@@ -6,7 +6,7 @@
 	text-shadow: none;
 
 .def
-	content: "see below";
+	content: "see below" !important; 
 
 p > pre
 	border: 1px solid #999;
