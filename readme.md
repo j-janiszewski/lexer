@@ -65,3 +65,13 @@ foo _bar, // valid id
 	margin: 1px // lack of semicolon is ok at the end
 
 ```
+
+## How to use it?
+
+Pass path to program that should be validated to validator.py
+
+```console
+python validator.py <program-path>
+```
+
+If program is valid "Valid program" will be printed to console if not information about an error.

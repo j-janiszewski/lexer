@@ -69,14 +69,12 @@ class Parser:
     def parse_program(self):
         while len(self.tokens) != 0:
             if self.current_token_name == TokenNames.NEWLINE:
-                print("newline")
                 self.move_to_next_token()
                 continue
             elif self.current_token_name == TokenNames.EOL:
                 self.program_end = True
                 self.take_token(TokenNames.EOL)
             else:
-                print("parsing entry")
                 self.parse_entry()
 
     def parse_entry(self):
@@ -144,11 +142,3 @@ class Parser:
                 TokenNames.NEWLINE, "After property newline must be present"
             )
             return True
-
-
-with open("test_files/empty.ppap", "r") as f:
-    test_file = f.read()
-
-
-s = Scanner(test_file)
-p = Parser(s)

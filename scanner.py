@@ -9,7 +9,7 @@ class TokenNames(Enum):
     URL_VALUE = re.compile(r"url\([0-9a-zA-Z\?=_:;-]+\)")
     ID = re.compile(r"\*|(#|\.)*[a-zA-Z._]*:*[a-zA-Z._]+")
     HEX_VALUE = re.compile(r"#[ABCDEFabcdefS0-9]{3}")
-    TEXT_VALUE = re.compile(r'".*"')
+    TEXT_VALUE = re.compile(r'"[^"]*"')
     PERC_VALUE = re.compile(r"[0-9]+%")
     PX_VALUE = re.compile(r"[1-9]+[0-9]*px")
     INT_VALUE = re.compile(r"[0-9]+")
