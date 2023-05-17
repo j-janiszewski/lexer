@@ -22,8 +22,8 @@ class TokenNames(Enum):
     NEWLINE = re.compile(r"\n")
     INDENTATION = re.compile(r"\t+")
     EOL = ""
-    INDENT = ""
-    DEDENT = ""
+    INDENT = " "
+    DEDENT = "  "
 
 
 IGNORED = [TokenNames.SPACE, TokenNames.COMMENT, TokenNames.INDENTATION]

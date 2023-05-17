@@ -33,7 +33,7 @@ class Parser:
     def tokens(self, new_tokens_value):
         if len(new_tokens_value) == 0 and not self.program_end:
             raise RuntimeError(
-                f"Enexcpected end of file - error at line: {self.line_number}, column: {self.column_number}"
+                f"Unexcpected end of file - error at line: {self.line_number}, column: {self.column_number}"
             )
         else:
             self.__tokens = new_tokens_value
@@ -49,7 +49,10 @@ class Parser:
     def take_token(self, expected_token, additional_msg=None):
         if self.current_token_name != expected_token:
             print(self.current_token_name, self.tokens[0].value)
-            msg = f"Expected {expected_token} - error at line: {self.line_number}, column: {self.column_number}"
+            if self.column_number:
+                msg = f"Expected {expected_token} - error at line: {self.line_number}, column: {self.column_number}"
+            else:
+                msg = f"Expected {expected_token} - error at the beginning of line: {self.line_number}"
             if additional_msg:
                 msg = f"{additional_msg} + {msg}"
             raise RuntimeError(msg)

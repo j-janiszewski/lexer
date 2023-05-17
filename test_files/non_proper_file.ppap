@@ -1,21 +1,19 @@
-p + q // operators (np. +, >) cannot appear more than once between id's
+p + q // kombinator (np. +, >) nie może pojawić się więcej niż raz między selektorami
 	content: "see below";
 	border: 1px solid #999;
 	page-break-inside: avoid;
 
 div+p,
 div>p
-	font-size: smaller; // too small indendation
-	font-family: serif; //too big indendation
-	font-weight: bolder; // here is ok
-	font-style: normal; 
+	font-size: smaller; // nie cztery spacje to niepoprawne wcięcie
+		font-family: serif; // ale zbyt duże wcięcie to też problem
+	font-weight: bolder; // powinna być tabulacja, jak tutaj
+	font-style: normal; // ta linia jest dobrze wcięta
 
 pine + apple
-	max-width: 100%; // only  !important can have !
+	max-width: 100% oops; // !important jest jedynym słowem kluczowym z !
 
-foo _bar, // valid id
-baz, // non-valid id
-:quax // valid id
-	display: flex; // semicolon must be present between attributes
-	margin: 1px // lack of semicolon is ok at the end
-
+foo _bar, // identyfikatory poprawne
+:quax // ten też jest poprawny
+	display: flex // brak średnika jest niedopuszczalny między deklaracjami
+	margin: 1px // ale jest OK na końcu
