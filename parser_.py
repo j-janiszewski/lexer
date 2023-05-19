@@ -44,15 +44,11 @@ class Parser:
 
     @property
     def column_number(self):
-        self.tokens[0].column
+        return self.tokens[0].column
 
     def take_token(self, expected_token, additional_msg=None):
         if self.current_token_name != expected_token:
-            print(self.current_token_name, self.tokens[0].value)
-            if self.column_number:
-                msg = f"Expected {expected_token} - error at line: {self.line_number}, column: {self.column_number}"
-            else:
-                msg = f"Expected {expected_token} - error at the beginning of line: {self.line_number}"
+            msg = f"Got {self.current_token_name}  \nExpected {expected_token} - error at line: {self.line_number}, column: {self.column_number}"
             if additional_msg:
                 msg = f"{additional_msg} + {msg}"
             raise RuntimeError(msg)

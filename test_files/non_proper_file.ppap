@@ -1,4 +1,4 @@
-p + q // kombinator (np. +, >) nie może pojawić się więcej niż raz między selektorami
+p + + q // kombinator (np. +, >) nie może pojawić się więcej niż raz między selektorami
 	content: "see below";
 	border: 1px solid #999;
 	page-break-inside: avoid;
